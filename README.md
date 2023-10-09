@@ -1,27 +1,35 @@
 # Test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+This is a simple test project to manage company employees
 
-## Development server
+## How it works
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+I'm currently working on some documentation for the requests.
 
-## Code scaffolding
+For convenience, I use a live API server running at [dummy.restapiexample](https://dummy.restapiexample.com/) for the application to make requests against.
+If you want to change the API URL to a local server, simply edit src/environments/environment.ts and change api_url to the local server's URL (i.e. localhost:4200/api).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Running the app
 
-## Build
+### development
+ npm run start
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### watch mode
+ npm run start:dev
 
-## Running unit tests
+### production mode
+ npm run start:prod
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Functionality overview
 
-## Running end-to-end tests
+## General functionality
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+* GET and display list of employees
+* C*UD employees
+* Get lists after C*UD with Rxjs
 
-## Further help
+## Built With
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Angular
+Bootstrap
+

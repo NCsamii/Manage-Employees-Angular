@@ -1,0 +1,43 @@
+<a type="button" class="btn m-1 btn-success" (click)="updateEmployees(updateEmployee)">Update</a>
+
+
+<ng-template #updateEmployee let-modal>
+  <div class="modal-header">
+    <h3 class="modal-title">Update employee</h3>
+  </div>
+
+  <div class="modal-body">
+    <form [formGroup]="updateEmployeeForm">
+      <div class="row g-7">
+        <div class="col-lg-12 mt-lg-6">
+          <div class="fv-row mb-3 fv-plugins-icon-container">
+            <label class="fs-6 fw-bold form-label mt-3">
+              <span class="required"> Name</span>
+            </label>
+            <input type="text" class="form-control form-control-solid" formControlName="name" name="name">
+          </div>
+          <div class="fv-row mb-3 fv-plugins-icon-container">
+            <label class="fs-6 fw-bold form-label mt-3">
+              <span class="required">Salary </span>
+            </label>
+            <input type="number" class="form-control form-control-solid" formControlName="salary" name="salary">
+          </div>
+          <div class="fv-row mb-3 fv-plugins-icon-container">
+            <label class="fs-6 fw-bold form-label mt-3">
+              <span class="required"> Age</span>
+            </label>
+            <input type="number" class="form-control form-control-solid" formControlName="age" name="age">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-sm btn-light" (click)="modal.close()">close</button>
+    <button type="button" class="btn btn-sm btn-primary float-end w-100px"
+            [class.disabled]="updateEmployeeForm.invalid" (click)="submitForm()">
+      Submit
+    </button>
+  </div>
+</ng-template>
+
